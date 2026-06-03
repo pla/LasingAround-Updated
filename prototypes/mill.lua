@@ -50,6 +50,17 @@ local lasermill = {
       secondary_draw_orders = { north = -1, east = -1, west = -1 },
       volume = 1000,
     },
+    {
+      production_type = "input",
+      pipe_picture = lasermill_pipes,
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = {
+        { flow_direction = "input", direction = defines.direction.west, position = { -1, 0 }},
+        { flow_direction = "input", direction = defines.direction.east, position = { 1, 0 }}
+      },
+      secondary_draw_orders = { north = -1, east = -1, west = -1 }
+    }
   },
   fluid_boxes_off_when_no_fluid_recipe = true,
   corpse = "laser-mill-remnants",

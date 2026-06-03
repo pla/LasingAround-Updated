@@ -29,7 +29,7 @@ if mods["Krastorio2"] then
   lasermill_recipe("kr-imersium-gear-wheel", {convert=true, helium=12, se_variant="space-crafting", se_tooltip_entity="se-space-assembling-machine", unlock="kr-imersium-processing"})
 
   lasermill_recipe("kr-blank-tech-card", {helium=1, type="circuit", productivity=true})
-  lasermill_recipe("kr-blank-tech-card-silver", {helium=1, type="circuit", productivity=true})
+  lasermill_recipe("blank-tech-card-silver", {helium=1, type="circuit", productivity=true})
 
   lasermill_recipe("kr-steel-pipe", {helium=8})
   lasermill_recipe("kr-steel-pipe-to-ground", {helium=25, type="entity"})
