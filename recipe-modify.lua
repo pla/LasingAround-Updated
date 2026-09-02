@@ -263,7 +263,7 @@ end
 
 function recipemod.SetCategory(recipe, category)
   if data.raw.recipe[recipe] then
-      data.raw.recipe[recipe].category = category
+      data.raw.recipe[recipe].categories = {category}
   end
 end
 

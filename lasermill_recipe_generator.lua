@@ -194,7 +194,7 @@ for name, recipe in pairs(data.raw.recipe) do
           remove_extraneous_fluids(recipe)
         end
         new_recipes_helium[name] = lasdata.helium or 1
-        recipe.category = "laser-milling-exclusive"
+        recipe.categories = {"laser-milling-exclusive"}
         if lasdata.multiply then
           new_recipes_multipliers[recipe.name] = lasdata.multiply
         end
@@ -206,11 +206,11 @@ for name, recipe in pairs(data.raw.recipe) do
         end
         if lasdata.convert then
           recipe_copy.name = name .. "-in-orbit"
-          recipe_copy.category = lasdata.se_variant
+          recipe_copy.categories = {lasdata.se_variant}
         else
           recipe_copy.name = name .. "-in-laser-mill"
           recipe_copy.localised_name = {"?", {recipe_copy.name}, {"", {"entity-name.laser-mill"}, " > ", flib_locale.of(recipe, recipe.name)}}
-          recipe_copy.category = "laser-milling"
+          recipe_copy.categories = {"laser-milling"}
           new_recipes_helium[recipe_copy.name] = lasdata.helium or 1
           if lasdata.multiply then
             new_recipes_multipliers[recipe_copy.name] = lasdata.multiply
