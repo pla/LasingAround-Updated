@@ -557,7 +557,7 @@ if mods["LunarLandings"] then
       ingredients = {{type="item", name="battery", amount=20}, {type="item", name="empty-amplifier-tube", amount=20}, {type="fluid", name="ll-astroflux", amount=50}, 
         {type="item", name="ll-superposed-polariton", amount=1, ignored_by_stats=1}, {type="item", name="ll-up-polariton", amount=1, ignored_by_stats=1}},
       results = {{type="item", name="helium-laser", amount=20}, {type="item", name="ll-up-polariton", amount=1, independent_probability=0.2, ignored_by_productivity=1, ignored_by_stats=1}, 
-        {type="item", name="ll-down-polariton", amount=1, independent_probability=0.4, ignored_by_productivity=1, ignored_by_stats=1}, {type="item", name="ll-left-polariton", amount=1, probability=0.6, ignored_by_productivity=1, ignored_by_stats=1},
+        {type="item", name="ll-down-polariton", amount=1, independent_probability=0.4, ignored_by_productivity=1, ignored_by_stats=1}, {type="item", name="ll-left-polariton", amount=1, independent_probability=0.6, ignored_by_productivity=1, ignored_by_stats=1},
           {type="item", name="ll-right-polariton", amount=1, independent_probability=0.8, ignored_by_productivity=1, ignored_by_stats=1}},
       main_product = "helium-laser",
       enabled = false
