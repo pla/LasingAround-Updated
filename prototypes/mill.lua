@@ -1,6 +1,7 @@
 local util = require("util")
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
 
-local lasermill_pipes = assembler2pipepictures()
+local lasermill_pipes = assembler_pictures.assembler2pipepictures
 lasermill_pipes.south =
 {
   filename = "__LasingAround-Updated__/graphics/entity/pipe_connector_hr.png",
