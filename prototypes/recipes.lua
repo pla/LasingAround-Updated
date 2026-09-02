@@ -97,7 +97,7 @@ data:extend({
     enabled = false,
     energy_required = 2,
     ingredients = {{type="fluid", name="crude-oil", amount=100}, {type="fluid", name="steam", amount=20}, {type="item", name="spectroscope", amount=1}},
-    results = {{type="fluid", name="filtered-oil", amount=100, ignored_by_productivity=100, ignored_by_stats=100}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, ignored_by_productivity=1, ignored_by_stats=1}, {type="fluid", name="crude-oil", amount=5, ignored_by_productivity=5, ignored_by_stats=5}},
+    results = {{type="fluid", name="filtered-oil", amount=100, ignored_by_productivity=100, ignored_by_stats=100}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, independent_probability=0.99, ignored_by_productivity=1, ignored_by_stats=1}, {type="fluid", name="crude-oil", amount=5, ignored_by_productivity=5, ignored_by_stats=5}},
     allow_decomposition = false
   },
   (parts.bz.gold and not (mods["space-exploration"] or mods["ThemTharHills-Updated"])) and {
@@ -230,7 +230,7 @@ if parts.bz.gas then
       enabled = false,
       energy_required = 10,
       ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=20}, {type="item", name="spectroscope", amount=1}},
-      results = {{type="fluid", name="formaldehyde", amount=90, ignored_by_productivity=90, ignored_by_stats=90}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, ignored_by_productivity=1, ignored_by_stats=1}, {type="fluid", name="gas", amount=5, ignored_by_productivity=5, ignored_by_stats=5}},
+      results = {{type="fluid", name="formaldehyde", amount=90, ignored_by_productivity=90, ignored_by_stats=90}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, independent_probability=0.99, ignored_by_productivity=1, ignored_by_stats=1}, {type="fluid", name="gas", amount=5, ignored_by_productivity=5, ignored_by_stats=5}},
       allow_decomposition = false
     },
   })
@@ -309,7 +309,7 @@ if parts.bz.gas then
           enabled = false,
           energy_required = 12,
           ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=40}, {type="item", name="spectroscope", amount=1}},
-          results = {{type="fluid", name="kr-hydrogen", amount=400, ignored_by_productivity=400, ignored_by_stats=400}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
+          results = {{type="fluid", name="kr-hydrogen", amount=400, ignored_by_productivity=400, ignored_by_stats=400}, {type="fluid", name="helium", amount=helium_yield * 3}, {type="item", name="spectroscope", amount=1, independent_probability=0.99, catalyst_amount=1}, {type="fluid", name="gas", amount=5, catalyst_amount=5}},
           allow_decomposition = false
         }
     })
@@ -390,7 +390,7 @@ if parts.bz.gas then
           energy_required = 4,
           ingredients = {{type="fluid", name="gas", amount=100}, {type="fluid", name="steam", amount=20}, {type="item", name="spectroscope", amount=1}},
           results = {{type="fluid", name="se-methane-gas", amount=100, ignored_by_stats=100}, {type="fluid", name="helium", amount=helium_yield * 3}, 
-            {type="item", name="spectroscope", amount=1, probability=0.99, ignored_by_productivity=1, ignored_by_stats=1}, {type="fluid", name="gas", amount=5, ignored_by_productivity=5, ignored_by_stats=5}},
+            {type="item", name="spectroscope", amount=1, independent_probability=0.99, ignored_by_productivity=1, ignored_by_stats=1}, {type="fluid", name="gas", amount=5, ignored_by_productivity=5, ignored_by_stats=5}},
           allow_decomposition = false
         }
     })
@@ -556,9 +556,9 @@ if mods["LunarLandings"] then
       allow_decomposition = false,
       ingredients = {{type="item", name="battery", amount=20}, {type="item", name="empty-amplifier-tube", amount=20}, {type="fluid", name="ll-astroflux", amount=50}, 
         {type="item", name="ll-superposed-polariton", amount=1, ignored_by_stats=1}, {type="item", name="ll-up-polariton", amount=1, ignored_by_stats=1}},
-      results = {{type="item", name="helium-laser", amount=20}, {type="item", name="ll-up-polariton", amount=1, probability=0.2, ignored_by_productivity=1, ignored_by_stats=1}, 
-        {type="item", name="ll-down-polariton", amount=1, probability=0.4, ignored_by_productivity=1, ignored_by_stats=1}, {type="item", name="ll-left-polariton", amount=1, probability=0.6, ignored_by_productivity=1, ignored_by_stats=1},
-          {type="item", name="ll-right-polariton", amount=1, probability=0.8, ignored_by_productivity=1, ignored_by_stats=1}},
+      results = {{type="item", name="helium-laser", amount=20}, {type="item", name="ll-up-polariton", amount=1, independent_probability=0.2, ignored_by_productivity=1, ignored_by_stats=1}, 
+        {type="item", name="ll-down-polariton", amount=1, independent_probability=0.4, ignored_by_productivity=1, ignored_by_stats=1}, {type="item", name="ll-left-polariton", amount=1, probability=0.6, ignored_by_productivity=1, ignored_by_stats=1},
+          {type="item", name="ll-right-polariton", amount=1, independent_probability=0.8, ignored_by_productivity=1, ignored_by_stats=1}},
       main_product = "helium-laser",
       enabled = false
     }

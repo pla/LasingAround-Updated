@@ -98,7 +98,7 @@ if mods["space-exploration"] then
     rm.AddIngredient("se-space-particle-accelerator", "laboratory-gear", 80)
 
     rm.AddIngredient("se-genetic-data", "laboratory-gear", 1)
-    rm.AddProductRaw("se-genetic-data", {type="item", name="laboratory-gear", probability=0.99, amount=1})
+    rm.AddProductRaw("se-genetic-data", {type="item", name="laboratory-gear", independent_ability=0.99, amount=1})
   end
 
   tf.addPrereq("se-space-belt", "scanner")
@@ -125,16 +125,16 @@ if mods["space-exploration"] then
   rm.AddIngredient("se-dynamic-emitter", "carbon-dioxide-laser", 1)
 
   rm.AddIngredient("se-zero-point-energy-data", "carbon-dioxide-laser", 1)
-  rm.AddProductRaw("se-zero-point-energy-data", {name="carbon-dioxide-laser", type="item", amount=1, probability=0.75})
-  rm.AddProductRaw("se-zero-point-energy-data", {name="se-scrap", type="item", amount=10, probability=0.25})
+  rm.AddProductRaw("se-zero-point-energy-data", {name="carbon-dioxide-laser", type="item", amount=1, independent_probability=0.75})
+  rm.AddProductRaw("se-zero-point-energy-data", {name="se-scrap", type="item", amount=10, independent_probability=0.25})
 
   rm.AddIngredient("se-polarisation-data", "helium-laser", 1)
-  rm.AddProductRaw("se-polarisation-data", {name="helium-laser", type="item", amount=1, probability=0.75})
-  rm.AddProductRaw("se-polarisation-data", {name="se-scrap", type="item", amount=3, probability=0.25})
+  rm.AddProductRaw("se-polarisation-data", {name="helium-laser", type="item", amount=1, independent_probability=0.75})
+  rm.AddProductRaw("se-polarisation-data", {name="se-scrap", type="item", amount=3, independent_probability=0.25})
 
   rm.AddIngredient("se-quantum-phenomenon-data", "helium-laser", 1)
-  rm.AddProductRaw("se-quantum-phenomenon-data", {name="helium-laser", type="item", amount=1, probability=0.75})
-  rm.AddProductRaw("se-quantum-phenomenon-data", {name="se-scrap", type="item", amount=3, probability=0.25})
+  rm.AddProductRaw("se-quantum-phenomenon-data", {name="helium-laser", type="item", amount=1, independent_probability=0.75})
+  rm.AddProductRaw("se-quantum-phenomenon-data", {name="se-scrap", type="item", amount=3, independent_probability=0.25})
 
   --beryllium
   lasermill_recipe("se-aeroframe-scaffold", {convert=true, helium=8, se_variant="space-crafting", se_tooltip_entity="se-space-assembling-machine", unlock="se-aeroframe-scaffold", icon_offset = {data.raw.item["nanotubes"] and 8 or -8, -8}})

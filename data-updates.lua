@@ -210,9 +210,9 @@ if mods["LunarLandings"] then
 
   tf.addPrereq("ll-space-data-collection", "spectroscopy")
   rm.AddIngredient("ll-data-card", "spectroscope", 1)
-  rm.AddProductRaw("ll-data-card", {type="item", name="spectroscope", amount=1, probability=0.75})
+  rm.AddProductRaw("ll-data-card", {type="item", name="spectroscope", amount=1, independent_probability=0.75})
   rm.AddIngredient("ll-quantum-data-card", "spectroscope", 1)
-  rm.AddProductRaw("ll-quantum-data-card", {type="item", name="spectroscope", amount=1, probability=0.33})
+  rm.AddProductRaw("ll-quantum-data-card", {type="item", name="spectroscope", amount=1, independent_probability=0.33})
 
   rm.AddIngredient("ll-telescope", "spectroscope", 20)
 
@@ -220,9 +220,9 @@ if mods["LunarLandings"] then
   rm.ReplaceIngredient("ll-quantum-resonator", "lab", "carbon-dioxide-laser", 5)
 
   rm.AddIngredient("ll-superposition-right-left", "carbon-dioxide-laser", 1)
-  rm.AddProductRaw("ll-superposition-right-left", {type="item", name="carbon-dioxide-laser", amount=1, probability=0.9})
+  rm.AddProductRaw("ll-superposition-right-left", {type="item", name="carbon-dioxide-laser", amount=1, independent_probability=0.9})
   rm.AddIngredient("ll-superposition-up-down", "carbon-dioxide-laser", 1)
-  rm.AddProductRaw("ll-superposition-up-down", {type="item", name="carbon-dioxide-laser", amount=1, probability=0.9})
+  rm.AddProductRaw("ll-superposition-up-down", {type="item", name="carbon-dioxide-laser", amount=1, independent_probability=0.9})
 
   if data.raw.item["tracker"] then
     rm.AddIngredient("rocket-part-interstellar", "tracker", 1)
